@@ -1,0 +1,32 @@
+<?import javafx.scene.layout.AnchorPane?>
+<?import com.jfoenix.controls.JFXDialog?>
+<?import com.jfoenix.controls.JFXDialogLayout?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" prefHeight="600.0" prefWidth="800.0"
+            fx:controller="controllers.testdialog" fx:id="context">
+    <children>
+        <StackPane fx:id="root" layoutX="270" layoutY="170">
+            <VBox spacing="20" alignment="CENTER" maxWidth="400" maxHeight="300">
+                <JFXButton fx:id="centerButton" prefWidth="200" prefHeight="50" buttonType="RAISED" text="JFXDialog 弹窗" onAction="#alert"
+                           style="-fx-font-size: 15px; -fx-background-color: #FF8C00; -fx-text-fill: #F0F8FF;"/>
+            </VBox>
+        </StackPane>
+        <JFXDialog fx:id="dialog">
+            <JFXDialogLayout>
+                <heading>
+                    <Label>JFoenix 弹窗标题</Label>
+                </heading>
+                <body>
+                    <Label>JFoenix 是一个开源 Java 库，它使用 Java 组件实现 Google Material 设计。要开始使用 JFoenix ，您只需从 GitHub 下载它。</Label>
+                </body>
+                <actions>
+                    <JFXButton fx:id="acceptButton" prefWidth="60" prefHeight="30" style="-fx-background-color: #DDA0DD;" text="确 定" onAction="#close"/>
+                </actions>
+            </JFXDialogLayout>
+        </JFXDialog>
+    </children>
+</AnchorPane>
+

@@ -1,6 +1,7 @@
 package run;
 
 import javafx.application.Application;
+import loaders.LoginLoader;
 
 /**
  * @author StarsEnd
@@ -8,6 +9,6 @@ import javafx.application.Application;
  */
 public class MainRun {
     public static void main(String[] args){
-        Application.launch(loaders.LoginLoader.class);
+        Application.launch(LoginLoader.class);
     }
 }
